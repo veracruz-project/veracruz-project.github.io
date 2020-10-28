@@ -1,5 +1,7 @@
+title: Veracruz: privacy-preserving collaborative compute
+author: The Veracruz Development Team
+permalink: /:year-:month-:day-:title
 theme: jekyll-theme-minimal
-include:
-  - './_posts'
 exclude:
-  - './README.md'
+  - README.md
+  - LICENSE
