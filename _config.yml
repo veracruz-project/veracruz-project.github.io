@@ -1,2 +1,5 @@
 theme: jekyll-theme-minimal
-exclude: ['./README.md']
+include:
+  - './_posts'
+exclude:
+  - './README.md'
