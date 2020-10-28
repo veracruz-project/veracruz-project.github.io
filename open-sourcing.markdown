@@ -1,4 +1,8 @@
-# Veracruz: an open-source project
+---
+layout: post
+date: 28 September 2020
+title: Veracruz is now an open-source project
+---
 
 Until recently, Veracruz was a research project developed internally by members of the Distributed Systems and Security team within Arm Research.
 Yesterday, we open-sourced Veracruz, and will continue further development in the open.
