@@ -1,0 +1,13 @@
+I was prepared to write a lengthy post here about how we ported Veracruz to run on the recently announced Nitro Enclaves for Graviton processors (which, if you're not a fanboy, are AARCH64 cores instead of Intel).
+
+However, there's not much to write, because it just... worked.
+
+One of the team members had already added the tooling support in our docker container, so when it came time to port to the newly supported
+platform, we just needed to pull the code onto a newly created EC2 instance, build the docker file, and then run the tests. Everything just worked.
+
+There was one tiny hitch when running the Linux platform on Graviton, but that wasn't required to run Nitro (remember, the linux support is just
+a development vehicle that "pretends" to use PSA attestation). This involved a difference in the way the Rust tooling treats C char values for
+x86_64 vs aarch64 (one treats them as `u8` and the other as `i8`, I can't remember which is which). This is all neither here nor there, as PSA attestation
+is not required for Nitro enclaves.
+
+All in all, we were very pleased with how easy the porting was, which was made truly simple by the work the team did ahead of time, of course.
